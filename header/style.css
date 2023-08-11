@@ -1,0 +1,47 @@
+/* Header */
+
+#title {
+  color: var(--dark0);
+}
+#byLine {
+  color: var(--dark1);
+  -webkit-text-decoration-color: var(--dark1);
+          text-decoration-color: var(--dark1);
+}
+#byLine:hover, #byLine:focus-visible {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  #title {
+    color: var(--light1);
+  }
+  #byLine {
+    color: var(--light2);
+    -webkit-text-decoration-color: var(--light2);
+            text-decoration-color: var(--light2);
+  }
+  #byLine:hover, #byLine:focus-visible {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background-image: var(--primary);
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+#title {
+  text-align: center;
+}
+#byLine {
+  height: 3rem;
+  display: inline-block;
+  padding: 0.8rem 1rem 0.6rem 1rem;
+  border-radius: 1.5rem;
+  transition: background-color 200ms;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button onClick="createToast('Toast!', {onClose: () => alert('Closed!')})" style="border: revert; background-color: revert;">Toast!</button>
+  <button onClick="createToast('Permanent toast', {permanent: true})" style="border: revert; background-color: revert;">Permanent toast</button>
+  <button onClick="createToast('Toast with button', {button: true, buttonText: 'Alert', onButtonClick: () => alert('Button pressed')})" style="border: revert; background-color: revert;">Toast with button</button>
+  <button onClick="createToast('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet pellentesque tortor. Cras ut nulla ligula. Vivamus ac massa nec felis rhoncus lobortis posuere vehicula justo. Duis sed erat vitae tortor vehicula efficitur. Nullam urna erat, porttitor vitae molestie vitae, viverra sed nisi. Sed tempor hendrerit arcu, a egestas lorem congue quis. Integer rutrum leo quam, eu varius lacus rhoncus vel. Ut sagittis augue sed tellus rutrum, vitae vestibulum elit accumsan.')" style="border: revert; background-color: revert;">Long toast</button>
+
+  <div id="toasts"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
