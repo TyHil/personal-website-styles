@@ -1,0 +1,16 @@
+/* SVG */
+
+:root, ::before, ::after {
+  --darkSVG: invert(12%) sepia(9%) saturate(0%) hue-rotate(230deg) brightness(99%) contrast(100%);
+  --lightSVG: invert(100%) sepia(0%) saturate(7478%) hue-rotate(195deg) brightness(121%) contrast(75%);
+}
+.svg {
+  -webkit-filter: var(--lightSVG);
+          filter: var(--lightSVG);
+}
+@media (prefers-color-scheme: light) {
+  .svg {
+    -webkit-filter: var(--darkSVG);
+            filter: var(--darkSVG);
+  }
+}
