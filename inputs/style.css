@@ -55,6 +55,8 @@ button:hover, button:focus-visible, a.button:hover, a.button:focus-visible {
   background-color: var(--dark2);
 }
 a.button {
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 
