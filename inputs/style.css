@@ -35,23 +35,27 @@ input.disabled, label.disabled {
 
 /*Button*/
 
-button {
+button, a.button {
   background-color: var(--dark1);
   color: var(--light0);
   transition: background-color 200ms;
 }
-button.small {
+button.small, a.button.small {
+  font-size: 0.8rem;
   padding: 0.2rem 0.5rem;
   border-radius: 0.25rem;
 }
-button.big {
+button.big, a.button.big {
   font-size: 1rem;
   line-height: 1.6rem;
   padding: 0.7rem 1rem;
   border-radius: 1.5rem;
 }
-button:hover, button:focus-visible {
+button:hover, button:focus-visible, a.button:hover, a.button:focus-visible {
   background-color: var(--dark2);
+}
+a.button {
+  cursor: pointer;
 }
 
 /*Text, number, and textarea*/
