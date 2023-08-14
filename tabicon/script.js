@@ -1,4 +1,4 @@
-/* Inputs */
+/* Tab Icon */
 
 const tabicon = document.querySelector('link[rel="icon"]');
 window
