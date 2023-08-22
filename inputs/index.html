@@ -10,9 +10,24 @@
 
 <body>
   <div>
+    <button style="all: revert;" onclick="
+      const all = document.querySelectorAll('input, button, textarea');
+      for(let i = 0; i < all.length; i++) {
+        all[i].setAttribute('disabled', true);
+      }
+    ">Disable</button>
+    <button style="all: revert;" onclick="
+      const all = document.querySelectorAll('input, button, a.button, textarea, label');
+      for(let i = 0; i < all.length; i++) {
+        all[i].classList.add('disabled');
+      }
+    ">Disable with class</button>
+  </div>
+
+  <div>
     <h2>Large</h2>
     <button class="large">Button</button>
-    <a class="large button">Link Button</a>
+    <a href="/" class="large button">Link Button</a>
   
     <div class="largeInputBox">
       <label for="largeText" title="Text">Text</label>
@@ -28,7 +43,7 @@
   <div>
     <h2>Medium</h2>
     <button class="medium">Button</button>
-    <a class="medium button">Link Button</a>
+    <a href="/" class="medium button">Link Button</a>
   
     <div class="largeInputBox">
       <label for="mediumText" title="Text">Text</label>
@@ -44,7 +59,7 @@
   <div>
     <h2>Small</h2>
     <button class="small">Button</button>
-    <a class="small button">Link Button</a>
+    <a href="/" class="small button">Link Button</a>
   
     <div class="smallInputBox">
       <label for="smallText" title="Text">Text</label>
