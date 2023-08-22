@@ -87,6 +87,8 @@ input::placeholder {
 }
 input[type=text], input[type=number], textarea {
   border: none;
+}
+input[type=text], input[type=number] {
   transition: background-color 200ms;
 }
 input[type=text].small, input[type=number].small, textarea {
@@ -106,8 +108,7 @@ input[type=text].large, input[type=number].large {
   border-radius: 1.5rem;
 }
 input[type=text]:hover, input[type=text]:focus-visible,
-input[type=number]:hover, input[type=number]:focus-visible,
-textarea:hover, textarea:focus-visible {
+input[type=number]:hover, input[type=number]:focus-visible {
   background-color: var(--dark2);
 }
 /*Scrollbar*/
