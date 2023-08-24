@@ -17,6 +17,9 @@ body > div {
 input, button {
   border: none;
 }
+input.large, button.large {
+  font-family: Tahoma, sans-serif;
+}
 .largeInputBox{
   display: flex;
   flex-direction: column;
