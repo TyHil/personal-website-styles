@@ -4,7 +4,7 @@
 
 ## Description
 
-Style guide for the personal website of Tyler Gordon Hill
+Style guide for the personal website of Tyler Gordon Hill available at [tylergordonhill.com](https://tylergordonhill.com).
 
 ## License
 
