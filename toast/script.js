@@ -9,7 +9,7 @@ function createToast(text, options) {
     onButtonClick: () => {},
     onClose: () => {}
   };
-  options = {...defaults, ...options};
+  options = { ...defaults, ...options };
 
   let div = document.createElement('div');
   div.classList.add('toast');
@@ -18,7 +18,7 @@ function createToast(text, options) {
     if (document.body.contains(div)) {
       div.classList.add('animateout');
       options.onClose();
-      div.addEventListener('animationend', function() {
+      div.addEventListener('animationend', function () {
         div.remove();
       });
     }
@@ -37,10 +37,10 @@ function createToast(text, options) {
   if (options.button) {
     let undo = document.createElement('button');
     undo.innerText = options.buttonText;
-    undo.addEventListener('click', function() {
+    undo.addEventListener('click', function () {
       options.onButtonClick();
       div.classList.add('animateout');
-      div.addEventListener('animationend', function() {
+      div.addEventListener('animationend', function () {
         div.remove();
       });
     });
@@ -49,10 +49,10 @@ function createToast(text, options) {
 
   if (!options.permanent) {
     let timer = setTimeout(close, options.delay);
-    div.addEventListener('mouseover', function() {
+    div.addEventListener('mouseover', function () {
       clearTimeout(timer);
     });
-    div.addEventListener('mouseout', function() {
+    div.addEventListener('mouseout', function () {
       timer = setTimeout(close, options.delay);
     });
   }

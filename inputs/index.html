@@ -1,93 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="../style.css" rel="stylesheet" type="text/css" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <div>
-    <button style="all: revert;" onclick="
+  <body>
+    <div>
+      <button
+        style="all: revert"
+        onclick="
       const all = document.querySelectorAll('input, button, textarea');
       for(let i = 0; i < all.length; i++) {
         all[i].setAttribute('disabled', true);
       }
-    ">Disable</button>
-    <button style="all: revert;" onclick="
+    "
+        >Disable</button
+      >
+      <button
+        style="all: revert"
+        onclick="
       const all = document.querySelectorAll('input, button, a.button, textarea, label');
       for(let i = 0; i < all.length; i++) {
         all[i].classList.add('disabled');
       }
-    ">Disable with class</button>
-  </div>
-
-  <div>
-    <h2>Large</h2>
-    <button class="large">Button</button>
-    <a href="/" class="large button">Link Button</a>
-  
-    <div class="largeInputBox">
-      <label for="largeText" title="Text">Text</label>
-      <input type="text" id="largeText" name="text" placeholder="Placeholder" title="Text" class="large">
-    </div>
-  
-    <div class="largeInputBox">
-      <label for="largeNumber" title="Number">Number</label>
-      <input type="number" id="largeNumber" name="number" value="5" min="1" max="10" title="Number" class="large">
-    </div>
-  </div>
-
-  <div>
-    <h2>Medium</h2>
-    <button class="medium">Button</button>
-    <a href="/" class="medium button">Link Button</a>
-  
-    <div class="largeInputBox">
-      <label for="mediumText" title="Text">Text</label>
-      <input type="text" id="mediumText" name="text" placeholder="Placeholder" title="Text" class="medium">
-    </div>
-  
-    <div class="largeInputBox">
-      <label for="mediumNumber" title="Number">Number</label>
-      <input type="number" id="mediumNumber" name="number" value="5" min="1" max="10" title="Number" class="medium">
-    </div>
-  </div>
-
-  <div>
-    <h2>Small</h2>
-    <button class="small">Button</button>
-    <a href="/" class="small button">Link Button</a>
-  
-    <div class="smallInputBox">
-      <label for="smallText" title="Text">Text</label>
-      <input type="text" id="smallText" name="text" placeholder="Placeholder" title="Text" class="small">
-    </div>
-  
-    <div class="smallInputBox">
-      <label for="smallNumber" title="Number">Number</label>
-      <input type="number" id="smallNumber" name="number" value="5" min="1" max="10" title="Number" class="small">
+    "
+        >Disable with class</button
+      >
     </div>
 
-    <div class="smallInputBox">
-      <label for="textarea" title="Textarea">Textarea</label>
-      <textarea id="textarea" name="textarea"></textarea>
-    </div>
-  
-    <div class="smallInputBox">
-      <input type="checkbox" id="checkbox" name="checkbox" title="Checkbox">
-      <label for="checkbox" title="Checkbox">Checkbox</label>
-    </div>
-  
-    <div class="smallInputBox">
-      <label for="file" title="File">File</label>
-      <input type="file" id="file" name="file" value="" title="File">
-    </div>
-  </div>
+    <div>
+      <h2>Large</h2>
+      <button class="large">Button</button>
+      <a href="/" class="large button">Link Button</a>
 
-  <script src="script.js"></script>
-</body>
+      <div class="largeInputBox">
+        <label for="largeText" title="Text">Text</label>
+        <input
+          type="text"
+          id="largeText"
+          name="text"
+          placeholder="Placeholder"
+          title="Text"
+          class="large"
+        />
+      </div>
 
+      <div class="largeInputBox">
+        <label for="largeNumber" title="Number">Number</label>
+        <input
+          type="number"
+          id="largeNumber"
+          name="number"
+          value="5"
+          min="1"
+          max="10"
+          title="Number"
+          class="large"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Medium</h2>
+      <button class="medium">Button</button>
+      <a href="/" class="medium button">Link Button</a>
+
+      <div class="largeInputBox">
+        <label for="mediumText" title="Text">Text</label>
+        <input
+          type="text"
+          id="mediumText"
+          name="text"
+          placeholder="Placeholder"
+          title="Text"
+          class="medium"
+        />
+      </div>
+
+      <div class="largeInputBox">
+        <label for="mediumNumber" title="Number">Number</label>
+        <input
+          type="number"
+          id="mediumNumber"
+          name="number"
+          value="5"
+          min="1"
+          max="10"
+          title="Number"
+          class="medium"
+        />
+      </div>
+    </div>
+
+    <div>
+      <h2>Small</h2>
+      <button class="small">Button</button>
+      <a href="/" class="small button">Link Button</a>
+
+      <div class="smallInputBox">
+        <label for="smallText" title="Text">Text</label>
+        <input
+          type="text"
+          id="smallText"
+          name="text"
+          placeholder="Placeholder"
+          title="Text"
+          class="small"
+        />
+      </div>
+
+      <div class="smallInputBox">
+        <label for="smallNumber" title="Number">Number</label>
+        <input
+          type="number"
+          id="smallNumber"
+          name="number"
+          value="5"
+          min="1"
+          max="10"
+          title="Number"
+          class="small"
+        />
+      </div>
+
+      <div class="smallInputBox">
+        <label for="textarea" title="Textarea">Textarea</label>
+        <textarea id="textarea" name="textarea"></textarea>
+      </div>
+
+      <div class="smallInputBox">
+        <input type="checkbox" id="checkbox" name="checkbox" title="Checkbox" />
+        <label for="checkbox" title="Checkbox">Checkbox</label>
+      </div>
+
+      <div class="smallInputBox">
+        <label for="file" title="File">File</label>
+        <input type="file" id="file" name="file" value="" title="File" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

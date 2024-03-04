@@ -1,49 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../style.css" rel="stylesheet" type="text/css" />
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="../../style.css" rel="stylesheet" type="text/css" />
-  <link href="../style.css" rel="stylesheet" type="text/css" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <div>
-    <button style="all: revert;" onclick="
+  <body>
+    <div>
+      <button
+        style="all: revert"
+        onclick="
       const all = document.querySelectorAll('input, button, textarea');
       for(let i = 0; i < all.length; i++) {
         all[i].setAttribute('disabled', true);
       }
-    ">Disable</button>
-    <button style="all: revert;" onclick="
+    "
+        >Disable</button
+      >
+      <button
+        style="all: revert"
+        onclick="
       const all = document.querySelectorAll('input, button, a.button, textarea, label');
       for(let i = 0; i < all.length; i++) {
         all[i].classList.add('disabled');
       }
-    ">Disable with class</button>
-  </div>
+    "
+        >Disable with class</button
+      >
+    </div>
 
-  <div>
-    <h2>Large</h2>
-    <button class="large featured">Button</button>
-    <a href="/" class="large button featured">Link Button</a>
-  </div>
+    <div>
+      <h2>Large</h2>
+      <button class="large featured">Button</button>
+      <a href="/" class="large button featured">Link Button</a>
+    </div>
 
-  <div>
-    <h2>Medium</h2>
-    <button class="medium featured">Button</button>
-    <a href="/" class="medium button featured">Link Button</a>
-  </div>
+    <div>
+      <h2>Medium</h2>
+      <button class="medium featured">Button</button>
+      <a href="/" class="medium button featured">Link Button</a>
+    </div>
 
-  <div>
-    <h2>Small</h2>
-    <button class="small featured">Button</button>
-    <a href="/" class="small button featured">Link Button</a>
-  </div>
+    <div>
+      <h2>Small</h2>
+      <button class="small featured">Button</button>
+      <a href="/" class="small button featured">Link Button</a>
+    </div>
 
-  <script src="../script.js"></script>
-</body>
-
+    <script src="../script.js"></script>
+  </body>
 </html>
