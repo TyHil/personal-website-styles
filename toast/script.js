@@ -9,7 +9,7 @@ function createToast(text, options) {
     onButtonClick: () => {},
     onClose: () => {}
   };
-  options = { ...defaults, ...options };
+  options = Object.assign({}, defaults, options);
 
   let div = document.createElement('div');
   div.classList.add('toast');
