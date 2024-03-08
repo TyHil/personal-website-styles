@@ -25,3 +25,14 @@ footer div a, footer div a:visited {
 footer div a:hover {
   text-decoration-color: var(--light1);
 }
+
+/*Extra*/
+/*Keep at bottom*/
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+#last-elemet {
+  margin-bottom: auto;
+}
