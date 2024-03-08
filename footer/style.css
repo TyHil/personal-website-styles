@@ -17,7 +17,8 @@ footer div {
 footer div p {
   margin-bottom: 0.25rem;
 }
-footer div a, footer div a:visited {
+footer div a,
+footer div a:visited {
   color: var(--light1);
   text-decoration-color: transparent;
   transition: text-decoration-color 200ms;
