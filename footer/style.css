@@ -34,6 +34,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-#last-elemet {
-  margin-bottom: auto;
+footer {
+  margin-top: auto;
 }
