@@ -106,3 +106,7 @@
     transform: translateX(200%);
   }
 }
+.toast.animateout {
+  -webkit-animation: slideout 500ms forwards;
+  animation: slideout 500ms forwards;
+}
