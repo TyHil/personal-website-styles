@@ -9,7 +9,6 @@
   max-width: 100%;
   padding-left: 0.5rem;
 }
-
 .toast {
   margin: 0 0.5rem 0.5rem auto;
   height: fit-content;
@@ -26,11 +25,9 @@
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .toast:not(:has(p + button)) {
   padding-right: 1rem;
 }
-
 .toast button {
   color: var(--light0);
   background-color: var(--dark2);
@@ -40,23 +37,19 @@
   padding: 0.5rem 0.75rem 0.4rem 0.75rem;
   border-radius: 3rem;
 }
-
 .toast button:hover,
 .toast button:focus-visible {
   background-color: var(--dark3);
 }
-
 .toast .close {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.1rem 0 0 0;
   aspect-ratio: 1 / 1;
 }
-
 .toast p {
   margin: 0;
 }
-
 @-webkit-keyframes slidein {
   from {
     -webkit-transform: translateX(120%);
@@ -70,7 +63,6 @@
     transform: translateX(0%);
   }
 }
-
 @keyframes slidein {
   from {
     -webkit-transform: translateX(120%);
@@ -84,12 +76,10 @@
     transform: translateX(0%);
   }
 }
-
 .toast.animatein {
   -webkit-animation: slidein 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: slidein 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 @-webkit-keyframes slideout {
   from {
     -webkit-transform: translateX(0%);
@@ -103,7 +93,6 @@
     transform: translateX(200%);
   }
 }
-
 @keyframes slideout {
   from {
     -webkit-transform: translateX(0%);
@@ -116,9 +105,4 @@
     -ms-transform: translateX(200%);
     transform: translateX(200%);
   }
-}
-
-.toast.animateout {
-  -webkit-animation: slideout 500ms forwards;
-  animation: slideout 500ms forwards;
 }
