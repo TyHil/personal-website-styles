@@ -1,15 +1,3 @@
-body {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-}
-body > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
 /* Inputs */
 
 /*General*/

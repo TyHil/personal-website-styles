@@ -77,12 +77,3 @@ button.featured:focus-visible::after,
 a.button.featured:focus-visible::after {
   opacity: 1;
 }
-
-/*Extra*/
-
-button.featured::after {
-  content: 'Button';
-}
-a.button.featured::after {
-  content: 'Link Button';
-}
