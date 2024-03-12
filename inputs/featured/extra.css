@@ -1,0 +1,8 @@
+/*Extra*/
+
+button.featured::after {
+  content: 'Button';
+}
+a.button.featured::after {
+  content: 'Link Button';
+}
