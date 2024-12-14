@@ -49,9 +49,7 @@ body {
   --dark0: #020d0b; /*#000*/
   --primary: linear-gradient(90deg, #128e5a, #12858e);
   --secondary: linear-gradient(90deg, #32ae7a, #32a5ae);
-}
-body {
-  accent-color: #128a74;
+  --accent: #128a74;
 }
 * {
   scrollbar-color: rgba(255, 255, 255, 0.24) var(--dark0);
@@ -77,9 +75,7 @@ body {
     --dark0: #e9f4f2; /*#fff*/
     --primary: linear-gradient(90deg, #1bd285, #1bc4d2);
     --secondary: linear-gradient(90deg, #00b265, #00a4b2);
-  }
-  body {
-    accent-color: #1bcbac;
+    --accent: #1bcbac;
   }
   * {
     scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark0);
@@ -98,6 +94,7 @@ body {
   font-family: Tahoma, sans-serif;
   background-color: var(--dark0);
   color: var(--light0);
+  accent-color: var(--accent);
 }
 
 /* Scrollbar */
