@@ -3,7 +3,9 @@
 :root,
 ::before,
 ::after {
+  /*Close to var(--dark1): #1f2a28*/
   --darkSVG: invert(12%) sepia(9%) saturate(0%) hue-rotate(230deg) brightness(99%) contrast(100%);
+  /*Close to var(--light1): #ccd7d5*/
   --lightSVG: invert(100%) sepia(0%) saturate(7478%) hue-rotate(195deg) brightness(121%)
     contrast(75%);
 }
@@ -12,9 +14,14 @@
 }
 .svg.dark {
   filter: var(--darkSVG);
+  color: var(--dark1);
 }
 @media (prefers-color-scheme: light) {
+  .svg.light {
+    color: var(--dark1);
+  }
   .svg:not(.light) {
     filter: var(--darkSVG);
+    color: var(--light1);
   }
 }
