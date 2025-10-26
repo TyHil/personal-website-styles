@@ -56,7 +56,11 @@ a.button.featured::before {
 button.featured,
 a.button.featured,
 button.featured::after,
-a.button.featured::after {
+a.button.featured::after,
+:root.always-dark button.featured,
+:root.always-dark a.button.featured,
+:root.always-dark button.featured::after,
+:root.always-dark a.button.featured::after {
   color: var(--dark0);
 }
 @media (prefers-color-scheme: light) {
@@ -66,6 +70,12 @@ a.button.featured::after {
   a.button.featured::after {
     color: var(--light0);
   }
+}
+:root.always-light button.featured,
+:root.always-light a.button.featured,
+:root.always-light button.featured::after,
+:root.always-light a.button.featured::after {
+  color: var(--light0);
 }
 button.featured:hover::before,
 a.button.featured:hover::before,

@@ -38,7 +38,10 @@ body {
 
 :root,
 ::before,
-::after {
+::after,
+:root.always-dark,
+:root.always-dark ::before,
+:root.always-dark ::after {
   /*Gradient color average: #128A74 10 midpoints first choice*/
   --light0: #e9f4f2; /*#fff*/
   --light1: #ccd7d5; /*#dfdfdf*/
@@ -51,13 +54,16 @@ body {
   --secondary: linear-gradient(90deg, #32ae7a, #32a5ae);
   --accent: #128a74;
 }
-* {
+*,
+:root.always-dark * {
   scrollbar-color: rgba(255, 255, 255, 0.24) var(--dark0);
 }
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+:root.always-dark ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.24);
 }
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover,
+:root.always-dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.28);
 }
 
@@ -86,6 +92,29 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.28);
   }
+}
+
+:root.always-light,
+:root.always-light ::before,
+:root.always-light ::after {
+  --light0: #020d0b; /*#000*/
+  --light1: #1f2a28; /*#202020*/
+  --light2: #2d3836; /*#303030*/
+  --dark2: #afbab8; /*#bfbfbf*/
+  --dark1: #ccd7d5; /*#dfdfdf*/
+  --dark0: #e9f4f2; /*#fff*/
+  --primary: linear-gradient(90deg, #1bd285, #1bc4d2);
+  --secondary: linear-gradient(90deg, #00b265, #00a4b2);
+  --accent: #1bcbac;
+}
+:root.always-light * {
+  scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark0);
+}
+:root.always-light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.24);
+}
+:root.always-light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
 }
 
 /* Body */

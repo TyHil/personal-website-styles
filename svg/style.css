@@ -9,10 +9,12 @@
   --lightSVG: invert(100%) sepia(0%) saturate(7478%) hue-rotate(195deg) brightness(121%)
     contrast(75%);
 }
-.svg {
+.svg,
+:root.always-dark .svg {
   filter: var(--lightSVG);
 }
-.svg.dark {
+.svg.dark,
+:root.always-dark .svg.dark {
   filter: var(--darkSVG);
   color: var(--dark1);
 }
@@ -24,4 +26,11 @@
     filter: var(--darkSVG);
     color: var(--light1);
   }
+}
+:root.always-light .svg.light {
+  color: var(--dark1);
+}
+:root.always-light .svg:not(.light) {
+  filter: var(--darkSVG);
+  color: var(--light1);
 }

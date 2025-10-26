@@ -1,3 +1,20 @@
+/* Theme */
+
+function updateTheme() {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'light') {
+    document.documentElement.classList.remove('always-dark');
+    document.documentElement.classList.add('always-light');
+  } else if (theme === 'dark') {
+    document.documentElement.classList.remove('always-light');
+    document.documentElement.classList.add('always-dark');
+  } else {
+    document.documentElement.classList.remove('always-light');
+    document.documentElement.classList.remove('always-dark');
+  }
+}
+updateTheme();
+
 /* Google Analytics */
 
 const firebaseConfig = {

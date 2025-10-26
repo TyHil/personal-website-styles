@@ -157,10 +157,12 @@ textarea {
 textarea::-webkit-scrollbar-track {
   background-color: var(--dark1);
 }
-textarea::-webkit-scrollbar-thumb {
+textarea::-webkit-scrollbar-thumb,
+:root.always-dark textarea::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.24);
 }
-textarea::-webkit-scrollbar-thumb:hover {
+textarea::-webkit-scrollbar-thumb:hover,
+:root.always-dark textarea::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.28);
 }
 @media (prefers-color-scheme: light) {
@@ -170,6 +172,12 @@ textarea::-webkit-scrollbar-thumb:hover {
   textarea::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.28);
   }
+}
+:root.always-light textarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.24);
+}
+:root.always-light textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
 }
 
 /*File*/
