@@ -12,10 +12,10 @@ document.getElementById('footer-theme').addEventListener('click', () => {
 
 const themeRadios = document.querySelectorAll('input[name="theme"]');
 
-themeRadios.forEach(function(radio) {
-  radio.addEventListener('change', function() {
+themeRadios.forEach(function (radio) {
+  radio.addEventListener('change', function () {
     let valueName = document.querySelector('input[name="theme"]:checked').value;
     localStorage.setItem('theme', valueName);
     updateTheme();
-  })
+  });
 });
