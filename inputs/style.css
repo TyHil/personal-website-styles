@@ -52,6 +52,11 @@ a.button.lighter.disabled,
 button.lighter:disabled {
   background-color: var(--dark3);
 }
+button.invalid,
+a.button.invalid,
+button:invalid {
+  border: 2px solid red;
+}
 button.small,
 a.button.small {
   font-size: 0.8rem;
@@ -139,6 +144,14 @@ input[type='text'].lighter:disabled,
 input[type='number'].lighter:disabled,
 textarea.lighter:disabled {
   background-color: var(--dark3);
+}
+input[type='text'].invalid,
+input[type='number'].invalid,
+textarea.invalid,
+input[type='text']:invalid,
+input[type='number']:invalid,
+textarea:invalid {
+  border: 2px solid red;
 }
 input::placeholder {
   color: var(--light2);
@@ -257,6 +270,10 @@ input[type='file']:disabled::file-selector-button {
 input[type='file'].lighter.disabled::file-selector-button,
 input[type='file'].lighter:disabled::file-selector-button {
   background-color: var(--dark3);
+}
+input[type='file'].invalid::file-selector-button,
+input[type='file']:invalid::file-selector-button {
+  border: 2px solid red;
 }
 input[type='file']::file-selector-button:hover,
 input[type='file']:focus-visible::file-selector-button {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style-guide/inputs/style.css" type="text/css" />
     <link rel="stylesheet" href="/style-guide/inputs/featured/style.css" type="text/css" />
     <link rel="stylesheet" href="/style-guide/inputs/featured/extra.css" type="text/css" />
+    <link rel="stylesheet" href="/style-guide/inputs/helper.css" type="text/css" />
   </head>
 
   <body>
@@ -30,6 +31,26 @@
       }
     "
         >Disable with class</button
+      >
+      <button
+        style="all: revert"
+        onclick="
+      const all = document.querySelectorAll('input, button, textarea');
+      for(let i = 0; i < all.length; i++) {
+        all[i].setCustomValidity('Invalid field.');
+      }
+    "
+        >Invalid</button
+      >
+      <button
+        style="all: revert"
+        onclick="
+      const all = document.querySelectorAll('input, button, a.button, textarea, label');
+      for(let i = 0; i < all.length; i++) {
+        all[i].classList.add('invalid');
+      }
+    "
+        >Invalid with class</button
       >
     </div>
 
