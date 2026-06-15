@@ -36,12 +36,21 @@ a.button {
   color: var(--light0);
   transition: background-color 200ms;
 }
+button.lighter,
+a.button.lighter {
+  background-color: var(--dark2);
+}
 button.disabled,
 a.button.disabled,
 button:disabled {
   background-color: var(--dark2);
   color: var(--light2);
   cursor: default;
+}
+button.lighter.disabled,
+a.button.lighter.disabled,
+button.lighter:disabled {
+  background-color: var(--dark3);
 }
 button.small,
 a.button.small {
@@ -68,6 +77,12 @@ button:focus-visible,
 a.button:hover,
 a.button:focus-visible {
   background-color: var(--dark2);
+}
+button.lighter:hover,
+button.lighter:focus-visible,
+a.button.lighter:hover,
+a.button.lighter:focus-visible {
+  background-color: var(--dark3);
 }
 a.button {
   text-align: center;
@@ -103,6 +118,11 @@ textarea {
   background-color: var(--dark1);
   color: var(--light0);
 }
+input[type='text'].lighter,
+input[type='number'].lighter,
+textarea.lighter {
+  background-color: var(--dark2);
+}
 input[type='text'].disabled,
 input[type='number'].disabled,
 textarea.disabled,
@@ -111,6 +131,14 @@ input[type='number']:disabled,
 textarea:disabled {
   background-color: var(--dark2);
   color: var(--light2);
+}
+input[type='text'].lighter.disabled,
+input[type='number'].lighter.disabled,
+textarea.lighter.disabled,
+input[type='text'].lighter:disabled,
+input[type='number'].lighter:disabled,
+textarea.lighter:disabled {
+  background-color: var(--dark3);
 }
 input::placeholder {
   color: var(--light2);
@@ -150,12 +178,41 @@ input[type='number']:hover,
 input[type='number']:focus-visible {
   background-color: var(--dark2);
 }
-/*Scrollbar*/
-textarea {
+input[type='text'].lighter:hover,
+input[type='text'].lighter:focus-visible,
+input[type='number'].lighter:hover,
+input[type='number'].lighter:focus-visible {
+  background-color: var(--dark3);
+}
+/*Scrollbar scrollbar-color*/
+textarea,
+:root.always-dark textarea {
+  scrollbar-color: rgba(255, 255, 255, 0.24) var(--dark1);
+}
+textarea.lighter,
+:root.always-dark textarea.lighter {
+  scrollbar-color: rgba(255, 255, 255, 0.24) var(--dark2);
+}
+@media (prefers-color-scheme: light) {
+  textarea {
+    scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark1);
+  }
+  textarea.lighter {
+    scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark2);
+  }
+}
+:root.always-light textarea {
   scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark1);
 }
+:root.always-light textarea.lighter {
+  scrollbar-color: rgba(0, 0, 0, 0.24) var(--dark2);
+}
+/*Scrollbar webkit*/
 textarea::-webkit-scrollbar-track {
   background-color: var(--dark1);
+}
+textarea.lighter::-webkit-scrollbar-track {
+  background-color: var(--dark2);
 }
 textarea::-webkit-scrollbar-thumb,
 :root.always-dark textarea::-webkit-scrollbar-thumb {
@@ -189,14 +246,25 @@ input[type='file']::file-selector-button {
   color: var(--light0);
   cursor: pointer;
 }
+input[type='file'].lighter::file-selector-button {
+  background-color: var(--dark2);
+}
 input[type='file'].disabled::file-selector-button,
 input[type='file']:disabled::file-selector-button {
   background-color: var(--dark2);
   color: var(--light2);
 }
+input[type='file'].lighter.disabled::file-selector-button,
+input[type='file'].lighter:disabled::file-selector-button {
+  background-color: var(--dark3);
+}
 input[type='file']::file-selector-button:hover,
 input[type='file']:focus-visible::file-selector-button {
   background-color: var(--dark2);
+}
+input[type='file'].lighter::file-selector-button:hover,
+input[type='file'].lighter:focus-visible::file-selector-button {
+  background-color: var(--dark3);
 }
 input[type='file']::file-selector-button {
   line-height: 1rem;

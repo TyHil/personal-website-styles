@@ -30,6 +30,16 @@
     "
         >Disable with class</button
       >
+      <button
+        style="all: revert"
+        onclick="
+      const all = document.querySelectorAll('input, button, a.button, textarea');
+      for(let i = 0; i < all.length; i++) {
+        all[i].classList.add('lighter');
+      }
+    "
+        >Make lighter</button
+      >
     </div>
 
     <div>
