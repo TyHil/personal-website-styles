@@ -43,3 +43,19 @@ footer a:visited {
 footer a:hover {
   text-decoration-color: var(--light1);
 }
+
+/* Extra Dark */
+
+#extra-dark-overlay {
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    circle 20vh at var(--mouse-x) var(--mouse-y),
+    transparent 80%,
+    var(--dark0) 100%
+  );
+  pointer-events: none;
+}

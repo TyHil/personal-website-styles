@@ -1,19 +1,42 @@
 /* Theme */
 
+let isExtraDark = localStorage.getItem('theme') === 'extra-dark';
 function updateTheme() {
   const theme = localStorage.getItem('theme');
+  const extraDarkOverlay = document.getElementById('extra-dark-overlay');
   if (theme === 'light') {
     document.documentElement.classList.remove('always-dark');
     document.documentElement.classList.add('always-light');
+    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
+    isExtraDark = false;
   } else if (theme === 'dark') {
     document.documentElement.classList.remove('always-light');
     document.documentElement.classList.add('always-dark');
+    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
+    isExtraDark = false;
+  } else if (theme === 'extra-dark') {
+    document.documentElement.classList.remove('always-light');
+    document.documentElement.classList.add('always-dark');
+    if (extraDarkOverlay) extraDarkOverlay.style.display = 'block';
+    isExtraDark = true;
   } else {
     document.documentElement.classList.remove('always-light');
     document.documentElement.classList.remove('always-dark');
+    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
+    isExtraDark = false;
   }
 }
 updateTheme();
+
+document.addEventListener('mousemove', function (event) {
+  if (!isExtraDark) return;
+
+  const extraDarkOverlay = document.getElementById('extra-dark-overlay');
+  if (!extraDarkOverlay) return;
+
+  extraDarkOverlay.style.setProperty('--mouse-x', event.clientX + 'px');
+  extraDarkOverlay.style.setProperty('--mouse-y', event.clientY + 'px');
+});
 
 /* Google Analytics */
 
