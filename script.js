@@ -1,3 +1,7 @@
+/* No JS */
+
+document.documentElement.classList.replace('no-js', 'js');
+
 /* Theme */
 
 let isExtraDark = localStorage.getItem('theme') === 'extra-dark';
