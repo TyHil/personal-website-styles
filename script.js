@@ -4,43 +4,32 @@ document.documentElement.classList.replace('no-js', 'js');
 
 /* Theme */
 
-let isExtraDark = localStorage.getItem('theme') === 'extra-dark';
+const extraDarkOverlay = document.getElementById('extra-dark-overlay');
+let isExtraDark = false;
+
 function updateTheme() {
   const theme = localStorage.getItem('theme');
-  const extraDarkOverlay = document.getElementById('extra-dark-overlay');
-  if (theme === 'light') {
-    document.documentElement.classList.remove('always-dark');
-    document.documentElement.classList.add('always-light');
-    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
-    isExtraDark = false;
-  } else if (theme === 'dark') {
-    document.documentElement.classList.remove('always-light');
-    document.documentElement.classList.add('always-dark');
-    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
-    isExtraDark = false;
-  } else if (theme === 'extra-dark') {
-    document.documentElement.classList.remove('always-light');
-    document.documentElement.classList.add('always-dark');
-    if (extraDarkOverlay) extraDarkOverlay.style.display = 'block';
-    isExtraDark = true;
-  } else {
-    document.documentElement.classList.remove('always-light');
-    document.documentElement.classList.remove('always-dark');
-    if (extraDarkOverlay) extraDarkOverlay.style.display = 'none';
-    isExtraDark = false;
+  isExtraDark = theme === 'extra-dark';
+
+  document.documentElement.classList.toggle('always-light', theme === 'light');
+  document.documentElement.classList.toggle('always-dark', theme === 'dark' || isExtraDark);
+
+  if (extraDarkOverlay) {
+    extraDarkOverlay.style.display = isExtraDark ? 'block' : 'none';
   }
 }
 updateTheme();
 
-document.addEventListener('mousemove', function (event) {
-  if (!isExtraDark) return;
+document.addEventListener(
+  'pointermove',
+  event => {
+    if (!isExtraDark || !extraDarkOverlay) return;
 
-  const extraDarkOverlay = document.getElementById('extra-dark-overlay');
-  if (!extraDarkOverlay) return;
-
-  extraDarkOverlay.style.setProperty('--mouse-x', event.clientX + 'px');
-  extraDarkOverlay.style.setProperty('--mouse-y', event.clientY + 'px');
-});
+    extraDarkOverlay.style.setProperty('--mouse-x', event.clientX + 'px');
+    extraDarkOverlay.style.setProperty('--mouse-y', event.clientY + 'px');
+  },
+  { passive: true }
+);
 
 /* Google Analytics */
 
